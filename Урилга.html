@@ -43,85 +43,33 @@
       font-size: 1.5em;
       color: #c2185b;
     }
-
-    /* Пянзны cover CSS */
-    .vinyl-cover {
-      position: relative;
-      width: 350px;
-      height: 350px;
-      margin: 40px auto;
-      background: radial-gradient(circle at center, #222 40%, #000 100%);
-      border-radius: 50%;
-      box-shadow: inset 0 0 50px #333, 0 10px 20px rgba(0,0,0,0.5);
-      overflow: hidden;
+    .response-buttons {
+      margin-top: 30px;
     }
-    .vinyl-label {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 140px;
-      height: 140px;
-      margin: -70px 0 0 -70px;
-      background: radial-gradient(circle at center, #e6a4b6 0%, #c2185b 100%);
-      border-radius: 50%;
-      box-shadow: 0 0 10px #c2185b inset;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .response-buttons button {
+      font-size: 1.1em;
+      margin: 0 15px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Nunito', sans-serif;
+    }
+    .response-buttons button.yes {
+      background-color: #d63384;
       color: white;
-      font-family: 'Great Vibes', cursive;
-      text-align: center;
-      padding: 10px;
     }
-    .vinyl-text-top {
-      font-size: 1.6em;
-      margin-bottom: 8px;
-      font-weight: 700;
-      letter-spacing: 1px;
+    .response-buttons button.yes:hover {
+      background-color: #b22a6e;
     }
-    .vinyl-text-bottom {
-      font-size: 1em;
-      font-weight: 300;
-      letter-spacing: 1px;
+    .response-buttons button.no {
+      background-color: #888;
+      color: white;
     }
-    .caps {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 30px;
-      height: 30px;
-      margin: -15px 0 0 -15px;
-      background: #c2185b;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #c2185b, inset 0 0 8px #fff;
-      z-index: 10;
+    .response-buttons button.no:hover {
+      background-color: #555;
     }
-    .petals {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 350px;
-      height: 350px;
-      margin: -175px 0 0 -175px;
-      pointer-events: none;
-    }
-    .petal {
-      position: absolute;
-      width: 50px;
-      height: 20px;
-      background: radial-gradient(circle at center, #c2185b, #7a004f);
-      border-radius: 15px 15px 0 0;
-      top: 50%;
-      left: 50%;
-      transform-origin: 50% 100%;
-      box-shadow: 0 0 8px #a5004a;
-    }
-    .petal:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateY(-140px); }
-    .petal:nth-child(2) { transform: translate(-50%, -50%) rotate(72deg) translateY(-140px); }
-    .petal:nth-child(3) { transform: translate(-50%, -50%) rotate(144deg) translateY(-140px); }
-    .petal:nth-child(4) { transform: translate(-50%, -50%) rotate(216deg) translateY(-140px); }
-    .petal:nth-child(5) { transform: translate(-50%, -50%) rotate(288deg) translateY(-140px); }
   </style>
 </head>
 <body>
@@ -135,21 +83,10 @@
     <p><strong>Мөнгөн хонхны баяр</strong>-т</p>
     <p>Таныг хүрэлцэн ирж, дурсамжид минь гэрэл нэмээрэй.</p>
     <div class="signature">💌 Аманда</div>
-  </div>
 
-  <!-- Пянзны cover -->
-  <div class="vinyl-cover" role="img" aria-label="Сургууль минь баяртай пянз хавтас">
-    <div class="vinyl-label">
-      <div class="vinyl-text-top">Сургууль минь баяртай</div>
-      <div class="vinyl-text-bottom">Graduation Memories</div>
-    </div>
-    <div class="caps" aria-hidden="true"></div>
-    <div class="petals" aria-hidden="true">
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
+    <div class="response-buttons">
+      <button class="yes" onclick="alert('Баярлалаа! Таныг баяртайгаар хүлээж байна 😊')">🎉 Ирнэ</button>
+      <button class="no" onclick="alert('Баярлалаа! Танд амжилт хүсье, үргэлж аз жаргалтай байгаарай 🌟')">🚫 Ирэхгүй</button>
     </div>
   </div>
 </body>
