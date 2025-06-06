@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="mn">
 <head>
@@ -44,6 +43,24 @@
       font-size: 1.5em;
       color: #c2185b;
     }
+    .response-buttons {
+      margin-top: 30px;
+    }
+    .response-buttons button {
+      background-color: #e6b3d1;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+      font-weight: bold;
+    }
+    .response-buttons button:hover {
+      background-color: #d63384;
+    }
   </style>
 </head>
 <body>
@@ -57,32 +74,11 @@
     <p><strong>Мөнгөн хонхны баяр</strong>-т</p>
     <p>Таныг хүрэлцэн ирж, дурсамжид минь гэрэл нэмээрэй.</p>
     <div class="signature">💌 Аманда</div>
-      <div class="response-buttons">
-    <button onclick="alert('Баярлалаа! Таныг хүлээж байя 😊')">🎉 Ирнэ</button>
-    <button onclick="alert('Харамсалтай байна 😢')">🚫 Ирэхгүй</button>
-        .response-buttons {
-  margin-top: 20px;
-}
 
-.response-buttons button {
-  background-color: #e6b3d1;
-  border: none;
-  padding: 12px 24px;
-  margin: 10px;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  color: white;
-  font-weight: bold;
-}
-
-.response-buttons button:hover {
-  background-color: #d63384;
-}
-
-  </div>
-</div>
+    <div class="response-buttons">
+      <button onclick="alert('Баярлалаа! Таныг хүлээж байя 😊')">🎉 Ирнэ</button>
+      <button onclick="alert('Харамсалтай байна 😢')">🚫 Ирэхгүй</button>
+    </div>
   </div>
 </body>
 </html>
